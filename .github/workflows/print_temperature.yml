@@ -1,0 +1,16 @@
+name: Print Temperature
+on:
+  workflow_dispatch:
+    inputs:
+      temperature:
+        description: 'La température reçue depuis Airflow'
+        required: true
+
+jobs:
+  print_temperature:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Affichage de la donnée
+        run: |
+          echo "🌡️ ALERTE MÉTÉO RECUE !"
+          echo "La température actuelle à Paris est de ${{ github.event.inputs.temperature }} Kelvin"
