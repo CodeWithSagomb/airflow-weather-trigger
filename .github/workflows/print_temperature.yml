@@ -8,7 +8,7 @@ on:
 
 jobs:
   print_temperature:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Affichage de la donnée
         run: |
